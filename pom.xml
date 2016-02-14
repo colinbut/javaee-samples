@@ -15,6 +15,7 @@
         <module>jstl</module>
         <module>concurrency-utils</module>
         <module>cdi</module>
+        <module>jsp</module>
     </modules>
 
     
