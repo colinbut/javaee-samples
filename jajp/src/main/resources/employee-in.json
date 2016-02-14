@@ -1,0 +1,12 @@
+{
+	"id":456,
+	"name":"Joe Bloggs",
+	"permanent":true,
+	"address":{
+			"street":"120 Craig Street",
+			"city":"London",
+			"postcode":"LS234H"
+	},
+	"phoneNumbers":[1316452345, 7920345651],
+	"position":"Software Developer"
+}
