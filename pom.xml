@@ -11,6 +11,7 @@
         <module>jta</module>
         <module>jms</module>
         <module>jajp</module>
+        <module>bean-validation</module>
     </modules>
 
     
