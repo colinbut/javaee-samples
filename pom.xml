@@ -13,6 +13,7 @@
         <module>jajp</module>
         <module>bean-validation</module>
         <module>jstl</module>
+        <module>concurrency_utils</module>
     </modules>
 
     
