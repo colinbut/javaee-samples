@@ -12,6 +12,7 @@
         <module>jms</module>
         <module>jajp</module>
         <module>bean-validation</module>
+        <module>jstl</module>
     </modules>
 
     
