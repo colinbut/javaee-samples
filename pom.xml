@@ -16,6 +16,7 @@
         <module>concurrency-utils</module>
         <module>cdi</module>
         <module>jsp</module>
+        <module>batch-applications</module>
     </modules>
 
     
