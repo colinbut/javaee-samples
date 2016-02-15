@@ -19,6 +19,7 @@
         <module>batch-applications</module>
         <module>interceptors</module>
         <module>decorators</module>
+        <module>ejb</module>
     </modules>
 
     
