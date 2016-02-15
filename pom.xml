@@ -18,6 +18,7 @@
         <module>jsp</module>
         <module>batch-applications</module>
         <module>interceptors</module>
+        <module>decorators</module>
     </modules>
 
     
