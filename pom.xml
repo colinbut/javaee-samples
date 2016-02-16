@@ -20,6 +20,7 @@
         <module>interceptors</module>
         <module>decorators</module>
         <module>ejb</module>
+        <module>servlet</module>
     </modules>
 
     
