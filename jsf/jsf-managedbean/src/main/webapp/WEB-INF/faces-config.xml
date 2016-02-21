@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+	
+	<!-- 
+		Setting Application Level Configurations
+	 -->
+	
+	<!-- should put these in a separate bean definiton file -->
+	<!-- 
+	<managed-bean>
+		<managed-bean-name>helloBean2</managed-bean-name>
+		<managed-bean-class>com.mycompany.jsf.managedbean.HelloBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	 -->
+	 
+</faces-config>

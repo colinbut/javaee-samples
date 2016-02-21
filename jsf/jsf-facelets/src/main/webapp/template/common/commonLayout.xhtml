@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+     <h:head>
+     	<h:outputStylesheet name="common-style.css" library="css"></h:outputStylesheet>
+     </h:head>
+      
+      <h:body>
+      	
+      	<div id="page">
+			
+			<div id="header">
+	      		<ui:insert name="header">
+	      			<ui:include src="commonHeader.xhtml">
+	      				<!-- passing parameter to an include file -->
+	      				<ui:param name="tagLine" value="JSF a day, bug away"></ui:param>
+	      			</ui:include>
+	      		</ui:insert>
+       		</div>
+       		
+       		<div id="content">
+	      		<ui:insert name="content">
+	      			Current file: #{curFileName}
+	      			<ui:include src="commonContent.xhtml"></ui:include>
+	      		</ui:insert>
+       		</div>
+       		
+       		<div id="footer">
+	      		<ui:insert name="footer">
+	      			<ui:include src="commonFooter.xhtml"></ui:include>
+	      		</ui:insert>
+       		</div>
+       		
+       		<ui:remove>
+	       		<div id="removable-footer">
+	       			<p>This footer should be removed!</p>
+	       		</div>
+       		</ui:remove>
+       		      	
+      	</div>
+      	
+      	
+      </h:body>
+      
+</html>

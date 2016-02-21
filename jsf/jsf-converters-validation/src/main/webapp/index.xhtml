@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+      <h:head>
+      	<title>JSF - Converters and Validation</title>
+      </h:head>
+      
+      <h:body>
+      	<h1>JSF - Converters and Validation</h1>
+      	
+      	<h3>Fill out receipt:</h3>
+      	
+      	<h:form>
+      		<!-- Number converter -->
+      		<h:panelGrid columns="3">  			
+      			<h:outputLabel value="Amount:"></h:outputLabel>
+      			<h:inputText id="amount" value="#{receipt.amount}" size="20" required="true" label="Amount">
+      				<f:convertNumber minFractionDigits="2"></f:convertNumber>
+      			</h:inputText>
+      			<h:message for="amount" style="color:red"></h:message>
+      		</h:panelGrid>	
+      			
+      	   	<!-- Date converter -->
+      	  	<h:panelGrid columns="3">
+      			<h:outputLabel value="Receipt Date:"></h:outputLabel>
+      			<h:inputText id="date" value="#{receipt.date}" size="20" required="true" label="Receipt Date">
+      				<f:convertDateTime pattern="dd-MM-yyyy"></f:convertDateTime>
+      			</h:inputText>
+      			<h:message for="date" style="color:red"></h:message>
+      		</h:panelGrid>
+      			
+      		<!-- validateLength -->
+      		<h:panelGrid columns="3">
+      			<h:outputLabel value="Company Name:"></h:outputLabel>
+      			<h:inputText id="companyname" value="#{receipt.shopName}" size="20" required="true" label="ShopName">
+      				<f:validateLength minimum="5" maximum="10"></f:validateLength>
+      			</h:inputText>
+      			<h:message for="companyname" style="color:red"></h:message>
+      		</h:panelGrid>
+      		
+      		<!-- validateLongRange -->
+      		<h:panelGrid columns="3">
+      			<h:outputLabel value="Number of Items:"></h:outputLabel>
+      			<h:inputText id="noOfItems" value="#{receipt.numberOfItems}" size="20" required="true" label="noOfItems">
+      				<f:validateLongRange minimum="1" maximum="150"></f:validateLongRange>
+      			</h:inputText>
+      			<h:message for="noOfItems" style="color:red"></h:message>
+      		</h:panelGrid>	
+      		
+      		<!-- validateDoubleRange -->
+      		<h:panelGrid columns="3">
+      			<h:outputLabel value="Total Price:"></h:outputLabel>
+      			<h:inputText id="totalPrice" value="#{receipt.total}" size="20" required="true" label="total">
+      				<f:validateDoubleRange minimum="10.11" maximum="10000.11"></f:validateDoubleRange>
+      			</h:inputText>
+      			<h:message for="totalPrice" style="color:red"></h:message>
+      		</h:panelGrid>	
+      		
+      		<!-- validateRequired (same as required attr) -->
+      		<h:panelGrid columns="3">
+      			<h:outputLabel value="Service Charge:"></h:outputLabel>
+      			<h:inputText id="serviceCharge" value="#{receipt.serviceCharge}" size="20" label="serviceCharge">
+      				<f:validateRequired></f:validateRequired>
+      			</h:inputText>
+      			<h:message for="serviceCharged" style="color:red"></h:message>
+      		</h:panelGrid>
+      		
+      		<!-- validateRegex -->
+      		<h:panelGrid columns="3">
+      			<h:outputLabel value="Email:"></h:outputLabel>
+      			<h:inputText id="email" value="#{receipt.email}" size="20" required="true" label="email">
+      				<f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"></f:validateRegex>
+      			</h:inputText>
+      			<h:message for="email" style="color:red"></h:message>
+      		</h:panelGrid>
+      		
+      		<h:commandButton value="Submit" action="receipt"></h:commandButton>
+      	</h:form>
+      </h:body>
+      
+</html>

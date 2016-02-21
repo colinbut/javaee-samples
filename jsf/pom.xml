@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                               http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>com.mycompany.javaeesamples</groupId>
+        <artifactId>javaee-samples</artifactId>
+        <version>1.0</version>
+    </parent>
+
     <groupId>com.mycompany.javaeesamples</groupId>
     <version>1.0</version>
-    <artifactId>javaee-samples</artifactId>
+    <artifactId>jsf</artifactId>
     <packaging>pom</packaging>
-    <name>javaee-samples</name>
+    <name>jsf</name>
 
     <modules>
-        <module>jta</module>
-        <module>jms</module>
-        <module>jajp</module>
-        <module>bean-validation</module>
-        <module>jstl</module>
-        <module>concurrency-utils</module>
-        <module>cdi</module>
-        <module>jsp</module>
-        <module>batch-applications</module>
-        <module>interceptors</module>
-        <module>decorators</module>
-        <module>ejb</module>
-        <module>servlet</module>
-        <module>jsf</module>
+        <module>jsf-composite-components</module>
+        <module>jsf-ajax</module>
+        <module>jsf-datatables</module>
+        <module>jsf-form-tags</module>
+        <module>jsf-managedbean</module>
+        <module>jsf-resourcebundles</module>
+        <module>jsf-converters-validation</module>
+        <module>jsf-eventhandler</module>
+        <module>jsf-hello-world</module>
+        <module>jsf-managedbean-injection</module>
+        <module>jsf-facelets</module>
+        <module>jsf-internationalization</module>
+        <module>jsf-navigation</module>
     </modules>
 
     

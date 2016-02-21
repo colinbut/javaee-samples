@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14415631746980" configfile="/JSF-Navigation/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="start.xhtml" x="122" y="562" id="pf14415641719208" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf144208097934711 pf144208097934712 pf144208097934713" path="/conditional-navigation/start.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="fromaction/fromaction.xhtml" x="122" y="1522" id="pf14420809248223" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf144208100192417 pf144208100192418" path="/fromaction/fromaction.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="conditional-navigation/ordermore.xhtml" id="pf144208097934714" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf144208097934711" path="/conditional-navigation/ordermore.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="conditional-navigation/payment.xhtml" id="pf144208097934715" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf144208097934712" path="/conditional-navigation/payment.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="conditional-navigation/register.xhtml" id="pf144208097934716" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf144208097934713" path="/conditional-navigation/register.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page1.xhtml" id="pf144208100192419" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf144208100192417" path="/page1.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" id="pf144208100192420" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" inlinks="pf144208100192418" path="/page2.xhtml"/>
+  <links id="pf144208097934711" target="pf144208097934714" source="pf14415641719208" outcome="payment"/>
+  <links id="pf144208097934712" target="pf144208097934715" source="pf14415641719208" outcome="payment"/>
+  <links id="pf144208097934713" target="pf144208097934716" source="pf14415641719208" outcome="payment"/>
+  <links id="pf144208100192417" target="pf144208100192419" source="pf14420809248223" outcome="success" fromaction="#{pageController.processPage1}"/>
+  <links id="pf144208100192418" target="pf144208100192420" source="pf14420809248223" outcome="success" fromaction="#{pageController.processPage2}"/>
+</pageflow:Pageflow>

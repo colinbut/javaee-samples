@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+      <h:head>
+      	<title>JSF - Implicit Navigation</title>
+      </h:head>
+      
+      <h:body>
+      
+      <h2>JSF - Implicit Navigation</h2>
+      		
+	      <h:form>		
+	      		
+	      	<h:commandButton value="Click me" action="page2"></h:commandButton>
+	      	<h:commandButton value="Click me again" action="#{pageController.moveToPage2}"></h:commandButton>
+	      	
+	      	<!-- redirection -->
+	      	<h:commandButton value="Click me again and again!" action="page2?faces-redirect=true"></h:commandButton> 
+	      	
+	      </h:form>
+	      
+      </h:body>
+      
+</html>

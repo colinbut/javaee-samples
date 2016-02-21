@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+      
+      <h:head>
+      	<h:outputStylesheet name="table-style.css" library="css"></h:outputStylesheet>
+      	<title>JSF - Datatables</title>
+      </h:head>
+      
+      <h:body>
+      
+      <h2>JSF - Datatables - Sortable using DataModel</h2>
+      
+      	<h:form>
+		  <h:dataTable value="#{sortableOrderBean.orderList}" var="order" 
+		  			styleClass="order-table" 
+		  			headerClass="order-table-header" 
+		  			rowClasses="order-table-odd-row,order-table-even-row">
+		  	
+		  	<h:column>
+		  		<!-- column header -->
+		  		<f:facet name="header">
+		  			<h:commandLink action="#{sortableOrderBean.sortByOrderNo}">
+		  				Order No.
+		  			</h:commandLink>
+		  		</f:facet> 
+		  		<h:inputText value="#{order.orderNo}" size="10" rendered="#{order.editable}"></h:inputText>
+		  		<h:outputText value="#{order.orderNo}" rendered="#{not order.editable}"></h:outputText> <!-- row record -->
+		  	</h:column>
+		  	
+		  	<h:column>
+		  		<f:facet name="header">Product Name</f:facet> <!-- column header -->
+		  		<h:inputText value="#{order.productName}" size="10" rendered="#{order.editable}"></h:inputText>
+		  		<h:outputText value="#{order.productName}" rendered="#{not order.editable}"></h:outputText>
+		  	</h:column>
+		  	
+		  	<h:column>
+		  		<f:facet name="header">Order Price</f:facet> <!-- column header -->
+		  		<h:inputText value="#{order.orderPrice}" size="10" rendered="#{order.editable}"></h:inputText>
+		  		<h:outputText value="#{order.orderPrice}" rendered="#{not order.editable}"></h:outputText>
+		  	</h:column>
+		  	
+		  	<h:column>
+		  		<f:facet name="header">Order Qty</f:facet> <!-- column header -->
+		  		<h:inputText value="#{order.orderQty}" size="10" rendered="#{order.editable}"></h:inputText>
+		  		<h:outputText value="#{order.orderQty}" rendered="#{not order.editable}"></h:outputText>
+		  	</h:column>
+		  	
+		  	
+		  	
+		  	
+		  </h:dataTable>
+	  	
+	  
+	  	</h:form>
+      </h:body>
+      
+</html>

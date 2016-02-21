@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>JSF Tag Library - Form</title>
+</h:head>
+<h:body>
+	
+	<h:outputStylesheet name="style.css" library="css"></h:outputStylesheet>
+	<h:outputScript name="common.js" library="js" target="head"></h:outputScript>
+	
+	<h2>JSF Tag Library</h2>
+	
+	<h:form>
+		<h:panelGrid columns="1">
+			<h:panelGroup>
+				<h:inputText value="#{formBean.name}"></h:inputText>
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:inputTextarea value="#{formBean.description}" cols="30" rows="10"></h:inputTextarea>
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:inputSecret value="#{formBean.password}"></h:inputSecret>
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:inputHidden value="Hidden Value!"></h:inputHidden>
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:selectBooleanCheckbox value="#{formBean.rememberMe}">Remember Me?</h:selectBooleanCheckbox>
+			</h:panelGroup>
+			<!-- Radio Buttons -->
+			<h:panelGroup>
+				<h:selectOneRadio value="#{userBean.favColor1}">
+					<f:selectItem itemLabel="Color1 - Yellow" itemValue="Yellow"></f:selectItem>
+					<f:selectItem itemLabel="Color2 - Orange" itemValue="Orange"></f:selectItem>
+					<f:selectItem itemLabel="Color3 - Pink" itemValue="Pink"></f:selectItem>
+				</h:selectOneRadio>
+				<br />
+				<h:selectOneRadio value="#{userBean.colorValues}">
+					<f:selectItems value="#{userBean.colorValues}"></f:selectItems>
+				</h:selectOneRadio>
+				<br />
+				<h:selectOneRadio>
+					<f:selectItems value="#{userBean.colorList}" var="c" itemLabel="#{c.colorLabel}" itemValue="#{c.colorValue}"></f:selectItems>
+				</h:selectOneRadio>
+			</h:panelGroup>
+			<!-- List box -->
+			<h:panelGroup>
+				<h:selectOneListbox value="#{userBean.favColor1}">
+					<f:selectItem itemLabel="Color1 - Yellow" itemValue="Yellow"></f:selectItem>
+					<f:selectItem itemLabel="Color2 - Orange" itemValue="Orange"></f:selectItem>
+					<f:selectItem itemLabel="Color3 - Pink" itemValue="Pink"></f:selectItem>
+				</h:selectOneListbox>
+				<br />
+				<h:selectOneListbox value="#{userBean.colorValues}">
+					<f:selectItems value="#{userBean.colorValues}"></f:selectItems>
+				</h:selectOneListbox>
+				<br />
+				<h:selectOneListbox>
+					<f:selectItems value="#{userBean.colorList}" var="c" itemLabel="#{c.colorLabel}" itemValue="#{c.colorValue}"></f:selectItems>
+				</h:selectOneListbox>
+			</h:panelGroup>
+			
+			<h:panelGroup>
+				<h:selectOneMenu value="#{userBean.favColor1}">
+					<f:selectItem itemLabel="Color1 - Yellow" itemValue="Yellow"></f:selectItem>
+					<f:selectItem itemLabel="Color2 - Orange" itemValue="Orange"></f:selectItem>
+					<f:selectItem itemLabel="Color3 - Pink" itemValue="Pink"></f:selectItem>
+				</h:selectOneMenu>
+				<br />
+				<h:selectOneMenu value="#{userBean.colorValues}">
+					<f:selectItems value="#{userBean.colorValues}"></f:selectItems>
+				</h:selectOneMenu>
+				<br />
+				<h:selectOneMenu>
+					<f:selectItems value="#{userBean.colorList}" var="c" itemLabel="#{c.colorLabel}" itemValue="#{c.colorValue}"></f:selectItems>
+				</h:selectOneMenu>
+			</h:panelGroup>
+			
+			<h:panelGroup>
+				<h:selectManyListbox value="#{userBean.favColor1}">
+					<f:selectItem itemLabel="Color1 - Yellow" itemValue="Yellow"></f:selectItem>
+					<f:selectItem itemLabel="Color2 - Orange" itemValue="Orange"></f:selectItem>
+					<f:selectItem itemLabel="Color3 - Pink" itemValue="Pink"></f:selectItem>
+				</h:selectManyListbox>
+				<br />
+				<h:selectManyListbox value="#{userBean.colorValues}">
+					<f:selectItems value="#{userBean.colorValues}"></f:selectItems>
+				</h:selectManyListbox>
+				<br />
+				<h:selectManyListbox>
+					<f:selectItems value="#{userBean.colorList}" var="c" itemLabel="#{c.colorLabel}" itemValue="#{c.colorValue}"></f:selectItems>
+				</h:selectManyListbox>
+			</h:panelGroup>
+			
+			<h:panelGroup>
+				<h:outputText value="#{formBean.name}"></h:outputText>
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:outputFormat value="param0: {0}, param1: {1}">
+					<f:param>Number 1</f:param>
+					<f:param value="Number 2"></f:param>
+				</h:outputFormat>
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:graphicImage value="resources/images/picture.png"></h:graphicImage>
+				<h:graphicImage name="picture.png" library="images"></h:graphicImage> <!-- JSF 2.0 (using resources library) -->
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:commandButton value="Reset" type="reset"></h:commandButton>
+				<h:commandButton value="Submit" type="submit"></h:commandButton>
+				<h:commandButton value="Button" type="button"></h:commandButton>
+				<h:commandButton value="Click this" type="button" onclick="alert('h:commandButton');"></h:commandButton>
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:button value="Click Me"></h:button> <!-- outcome attribute omitted - current page as outcome -->
+				<h:button value="Click Me Again!" outcome="page2"></h:button>
+				<h:button value="Click Me Please" onclick="alert('h:button');"></h:button> <!-- using JavaScript redirection -->
+			</h:panelGroup>	
+		</h:panelGrid >
+		
+		
+		
+	</h:form>
+	
+	<!-- param -->
+	<h:form>
+		<h:outputLabel value="Enter your name:"></h:outputLabel>
+		<h:inputText size="10" value="#{userBean.name}"></h:inputText>
+		<h:commandButton value="Submit - US" action="#{userBean.outcome}">
+			<f:param name="country" value="USA"></f:param>
+		</h:commandButton>
+	</h:form>
+	
+</h:body>
+</html>

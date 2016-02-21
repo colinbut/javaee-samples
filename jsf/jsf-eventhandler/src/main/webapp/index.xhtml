@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+
+	<f:event listener="#{userBean.isAdmin}" type="preRenderView"></f:event>
+
+	<h:body>
+		<h1>JSF Event Handler Examples</h1>
+		
+		<h:form id="valueChangeListener">
+			
+			<h:panelGrid columns="2">
+				
+				Selected country:
+				<h:inputText id="country" value="#{country.localeCode}" size="20"></h:inputText>
+				
+				Select a country (method binding):
+				<h:selectOneMenu value="#{country.localeCode}" onchange="submit()" valueChangeListener="#{country.countryLocaleCodeChanged}">
+					<f:selectItems value="#{country.countries}"></f:selectItems>
+				</h:selectOneMenu>
+				
+				Select a country (ValueChangeListener class):
+				<h:selectOneMenu value="#{country.localeCode}" onchange="submit()">
+					<f:valueChangeListener type="com.mycompany.jsf.eventhandler.CountryValueListener"></f:valueChangeListener>
+					<f:selectItems value="#{country.countries}"></f:selectItems>
+				</h:selectOneMenu>
+				
+			</h:panelGrid>
+			
+		</h:form>
+		
+		<h:form id="actionListener">
+			<h:commandButton id="submitButton" value="Submit" action="#{normalBean.outcome}">
+				<!-- actionListener="#{normalBean.printIt}"> -->
+				<f:actionListener type="com.mycompany.jsf.eventhandler.NormalActionListener"></f:actionListener>
+			</h:commandButton>
+		</h:form>
+		
+	</h:body>
+      
+</html>
