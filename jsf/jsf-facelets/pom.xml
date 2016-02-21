@@ -8,7 +8,6 @@
       <version>1.0</version>
     </parent>
 
-  <!--<groupId>com.mycompany.jsf.facelets</groupId> -->
   <artifactId>jsf-facelets</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>

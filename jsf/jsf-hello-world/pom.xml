@@ -8,7 +8,6 @@
       <version>1.0</version>
     </parent>
 
-	<!--<groupId>com.mycompany.jsf.helloworld</groupId>-->
 	<artifactId>jsf-hello-world</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>

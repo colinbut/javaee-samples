@@ -8,7 +8,6 @@
       <version>1.0</version>
     </parent>  
 
-  <!-- <groupId>com.mycompany.jsf.compositecomponents</groupId>-->
   <artifactId>jsf-composite-components</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
