@@ -1,7 +1,9 @@
 # JPA - Hibernate Example
 An example project demonstrating JPA (Java Persistence API) using Hibernate ORM in Java
 
-Below summarises key features of project. See code for detailed information
+This mini example project mainly focuses on the relationship aspect of JPA. In future when i have more time i will expand on this example project to include other areas of the JPA specification.
+
+Below summarises the key entity - table relationships. See code for detailed information.
 
 Using persistence.xml instead of hibernate.cfg.xml because we are using JPA's entity manager rather than the proprietary Hibernate SessionFactory & related classes.
 
