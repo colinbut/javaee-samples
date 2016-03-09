@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                               http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>com.mycompany.javaeesamples</groupId>
+        <artifactId>jpa</artifactId>
+        <version>1.0</version>
+    </parent>
+
+
+    <groupId>com.mycompany.javaeesamples</groupId>
+    <version>1.0</version>
+    <artifactId>hibernate</artifactId>
+    <packaging>pom</packaging>
+    <name>hibernate</name>
+
+    <modules>
+        <module>jpa-hibernate-example</module>
+        <module>hibernate-xml-mapping</module>
+        <module>hibernate-annotations</module>
+        <module>hibernate-one-to-one</module>
+        <module>hibernate-one-to-many</module>
+        <module>hibernate-logging-slf4j-logback</module>
+        <module>hibernate-logging-slf4j-log4j</module>
+        <module>hibernate-hql</module>
+        <module>hibernate-jpa-entitymanager</module>
+        <module>hibernate-jpa-criteria</module>
+        <module>hibernate-many-to-many</module>
+        <module>hibernate-many-many-extracolumn</module>
+    </modules>
+
+    
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.19.1</version>
+                    <configuration>
+                        <skipTests>true</skipTests>
+                    </configuration>
+                </plugin>
+
+
+            </plugins>
+      </pluginManagement>
+    </build>
+    
+</project>
